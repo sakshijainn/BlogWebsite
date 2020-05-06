@@ -15,11 +15,14 @@ body
 {
 	font:1.5/15px sans-serif;
 	margin: 0;
-	padding:0;
+	padding:0;	
 }
 
 
-
+.container {
+	max-width: 100%;
+	overflow: hidden;
+}
 
 
 /*Navigation Bar*/
@@ -155,7 +158,8 @@ nav
 .container-3
 {
 	display: flex;
-    justify-content: space-between;
+	justify-content: space-around;
+	padding:16px;	
 	align-items: center;
 	/*border-bottom: 2px solid #ffcccc;*/
 	min-height: 100vh;
@@ -166,9 +170,7 @@ nav
 .box3
 {
 	flex:1;
-	padding:50px;
 	min-height:40%;
-	margin-left: 20px;
     background:no-repeat;
     background-size: 100%;
 
@@ -185,8 +187,6 @@ nav
 .box4
 {
 	flex: 2;
-	margin-left: 60px;
-	margin-right:60px;
 	margin-bottom:50px;
 	margin-top:15px;
 	padding:20px;
@@ -213,7 +213,7 @@ nav
 {
 	display: flex;
 	min-height: 100vh;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
@@ -230,15 +230,12 @@ nav
 }
 
 .container-4 div:nth-of-type(2){
-	flex: none; /* make this flex item inflexible, so width property controls its width entirely */
-    width: 550px;
+    width: 100%;
 	}
 
 .box5
 {
 	/*padding-top:80px;*/
-	margin-left: 60px;
-	margin-right:60px;
 	margin-bottom:50px;
 	margin-top:20px;
 	padding:20px;
@@ -280,7 +277,7 @@ nav
 .last
 {
 	width:100%;
-	height:50px;
+	height:70px;
 	background-color:#222f3e;
 }
 
@@ -293,6 +290,7 @@ nav
 	letter-spacing: 2px;
 	justify-content: center;
 	align-items: center;
+	line-height: 1.5;
 }
 .last h4 a i
 {
@@ -307,7 +305,6 @@ nav
 {
 	 body {
        overflow-y: scroll;
-       overflow-x:hidden;
     }
 
     nav
@@ -319,14 +316,14 @@ nav
 @media screen and (max-width:540px) 
 {
 
-     body {
+    body {
        overflow-y: scroll;
        overflow-x:hidden;
-    }
+    } 
 	.container-1
 	{
 	display: block;
-	width: 520px;
+	width: 100%;	
 	
 	}
 
@@ -365,7 +362,7 @@ nav
 
 	.container-3
 	{
-		display: block;
+		flex-direction: column;
 		width: 100%;
 	}
 
@@ -405,7 +402,9 @@ nav
 
 	.container-4
 	{
-		display: block;
+		display: flex;
+		flex-direction: column-reverse;
+		
 	}
 
 	.box5 h2
@@ -421,15 +420,13 @@ nav
 	}
 
 	.box6
-	{
-
-		/*width: 100%
+	{	/*width: 100%
 		overflow:hidden;*/
 		 margin: 0 auto;
 		border: 1px solid #ccc;
 		background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 70% 70%;
+    	background-repeat: no-repeat;
+    	background-position: 70% 70%;
 
 	}
 
@@ -443,11 +440,6 @@ nav
 
 	}
  
- 	.last
- 	{
- 		width: 520px;
- 	}
-
 	.last h3
 	{
 		text-align: center;
@@ -542,22 +534,15 @@ nav
 		width: 100%;
 	}
 
-	.container-4
-	{
-		display: block;
-	}
 
 	.box6 
 	{
+		display: flex;
+		justify-content: center;
 
 	}
 
 	.box6 img{ 
-		
-
-		
-    margin-left: 150px;
-    margin-right: auto;
     display: block;
     height: 80%;
     width: 80%;
